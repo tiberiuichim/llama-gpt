@@ -22,6 +22,8 @@ services:
     cap_add:
       - IPC_LOCK
     command: '/bin/sh /api/run.sh'
+    volumes:
+      - ./models:/models
 
   llama-gpt-ui:
     image: 'ghcr.io/getumbrel/llama-gpt-ui:latest'
